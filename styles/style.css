@@ -62,8 +62,8 @@ h2 {
     font-family: poppinsmedium;
 }
 
-span{
-    color:rgb(20, 120, 0);
+span {
+    color: rgb(20, 120, 0);
 }
 
 p {
@@ -82,16 +82,16 @@ form {
     width: 70%;
 }
 
-form [type="submit"]{
+form [type="submit"] {
     height: 50px;
     width: 50%;
     background-color: rgb(20, 120, 0);
-    color:white;
+    color: white;
     font-weight: bold;
 }
 
-form [type="submit"]:hover{
-    cursor:pointer;
+form [type="submit"]:hover {
+    cursor: pointer;
 }
 
 input {
@@ -101,4 +101,14 @@ input {
     border-radius: 20px;
     border: none;
     font-size: 15px;
+}
+
+.controller {
+
+    transition: 0.2s ease-in;
+}
+
+.controller:hover {
+    transform: scale(1.2);
+    cursor: pointer;
 }
