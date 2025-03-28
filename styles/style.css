@@ -113,4 +113,68 @@ input {
     cursor: pointer;
 }
 
+.games-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+.game-card {
+    background: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.game-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.game-info {
+    padding: 15px;
+}
+
+.game-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: rgb(20, 120, 0);
+}
+
+.game-genre {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.game-description {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.game-rating {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .games-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
