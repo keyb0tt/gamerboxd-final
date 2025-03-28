@@ -50,8 +50,6 @@ body {
     color: #fff;
     font-size: 2.5rem;
     margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
 }
 
 .logo p {
@@ -212,4 +210,9 @@ body {
     .logo h1 {
         font-size: 2rem;
     }
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
 }
