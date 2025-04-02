@@ -11,21 +11,17 @@ document.querySelector(".meuFormulario").addEventListener("submit", function (ev
         remember: remember
     };
 
-    console.log("Dados do Login:", dadosLogin);
-
-    this.reset();
-});
-
-document.querySelector(".meuFormulario").addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-
     if (!email || !password) {
         console.error("Preencha todos os campos obrigatórios!");
         return;
     }
 
-    console.log("Dados válidos:", { email, password });
+    else if (remember) {
+        localStorage.setItem("dadosLogin", JSON.stringify(dadosLogin));
+    }
+
+    console.log("Dados do Login:", dadosLogin);
+
+    this.reset();
 });
+
