@@ -7,23 +7,52 @@
     <title>Clone Visual</title>
     <link rel="stylesheet" href="components/fonts/stylesheet.css">
     <link rel="stylesheet" href="/styles/perfil.css">
-    <link rel="stylesheet" href="/styles/perfil.css">
+    <link rel="stylesheet" href="/styles/media.css">
+    <link rel="stylesheet" href="/styles/login-navbar.css">
 </head>
 
 <body>
     <div class="app-container">
         <div class="main-container">
-            <header class="header">
-                DIV
+            <header>
+                <div id="title">
+                    <h1>Gamerbo<span>xd</span></h1>
+                </div>
+
+                <ul>
+                    <a href="/index.html">
+                        <li>Início</li>
+                    </a>
+                    <a href="/svc.html">
+                        <li>Jogos</li>
+                    </a>
+                    <a href="/sobre.html">
+                        <li>Sobre</li>
+                    </a>
+                    <a href="#">
+                        <li>Contato</li>
+                    </a>
+                </ul>
             </header>
 
             <div class="content">
                 <div class="sidebar">
-                    <div class="circle">
-                        DIV
-                    </div>
+                    <div class="profile-container">
+                        <div class="profile-pic-container">
+                          <!-- Imagem padrão que será substituída -->
+                          <img id="profile-pic" src="https://via.placeholder.com/200" alt="Foto de perfil">
+                          
+                          <!-- Input file escondido -->
+                          <input type="file" id="upload-input" accept="image/*" style="display: none;">
+                          
+                          <!-- Botão visível para acionar o upload -->
+                          <button id="change-pic-btn">
+                            <i class="fas fa-camera"></i> Alterar Foto
+                          </button>
+                        </div>
+                      </div>
                     <div class="paragraph">
-                        PARÁGRAFO
+                        SEU NOME
                     </div>
                 </div>
 
@@ -37,10 +66,10 @@
                     </nav>
 
                     <div class="cards-container">
-                        <div class="card">DIV</div>
-                        <div class="card">DIV</div>
-                        <div class="card">DIV</div>
-                        <div class="card">DIV</div>
+                        <div class="card">JOGO 1</div>
+                        <div class="card">JOGO 2</div>
+                        <div class="card">JOGO 3</div>
+                        <div class="card">JOGO 4</div>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,92 @@
+/* Estilos para a Navbar */
+header {
+    background-color: #1a1a1a;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#title h1 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+#title h1 span {
+    color: #4CAF50;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
+}
+
+header ul a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+header ul a:hover {
+    color: #ffffff;
+}
+
+header ul a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #4CAF50;
+    transition: width 0.3s ease;
+}
+
+header ul a:hover::after {
+    width: 100%;
+}
+
+#inscreva-se-btn {
+    background-color: #4CAF50;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    margin-left: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#inscreva-se-btn:hover {
+    background-color: #3e8e41;
+}
+
+#inscreva-se-btn::after {
+    display: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    header ul {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #inscreva-se-btn {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+}
