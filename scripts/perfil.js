@@ -74,3 +74,49 @@ document.querySelector('.profile-pic-container').addEventListener('mouseenter', 
 document.querySelector('.profile-pic-container').addEventListener('mouseleave', function () {
   this.querySelector('#change-pic-btn').style.opacity = '0';
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const editableName = document.querySelector('.editable-name');
+  const editNameBtn = document.querySelector('.edit-name-btn');
+
+  // Salva nome no localStorage
+  const savedName = localStorage.getItem('userName');
+  if (savedName) {
+    editableName.textContent = savedName;
+  }
+
+  // Mostra/oculta botão de edição
+  editableName.addEventListener('mouseenter', function () {
+    editNameBtn.style.opacity = '0.8';
+  });
+
+  editableName.addEventListener('mouseleave', function () {
+    if (!editableName.isContentEditable) {
+      editNameBtn.style.opacity = '0';
+    }
+  });
+
+  // Ativa edição
+  editNameBtn.addEventListener('click', function () {
+    editableName.contentEditable = 'true';
+    editableName.focus();
+    editNameBtn.style.opacity = '1';
+    editNameBtn.innerHTML = '<i class="fas fa-check"></i>';
+  });
+
+  // Salva quando perde o foco
+  editableName.addEventListener('blur', function () {
+    editableName.contentEditable = 'false';
+    localStorage.setItem('userName', editableName.textContent);
+    editNameBtn.innerHTML = '<i class="fas fa-pencil-alt"></i>';
+    editNameBtn.style.opacity = '0';
+  });
+
+  // Tecla Enter para salvar
+  editableName.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      editableName.blur();
+    }
+  });
+});

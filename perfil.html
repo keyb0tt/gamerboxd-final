@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clone Visual</title>
+    <title>Perfil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="components/fonts/stylesheet.css">
     <link rel="stylesheet" href="/styles/perfil.css">
     <link rel="stylesheet" href="/styles/media.css">
@@ -39,20 +40,23 @@
                 <div class="sidebar">
                     <div class="profile-container">
                         <div class="profile-pic-container">
-                          <!-- Imagem padrão que será substituída -->
-                          <img id="profile-pic" src="https://via.placeholder.com/200" alt="Foto de perfil">
-                          
-                          <!-- Input file escondido -->
-                          <input type="file" id="upload-input" accept="image/*" style="display: none;">
-                          
-                          <!-- Botão visível para acionar o upload -->
-                          <button id="change-pic-btn">
-                            <i class="fas fa-camera"></i> Alterar Foto
-                          </button>
+                            <!-- Imagem padrão que será substituída -->
+                            <img id="profile-pic" src="https://via.placeholder.com/200" alt="Foto de perfil">
+
+                            <!-- Input file escondido -->
+                            <input type="file" id="upload-input" accept="image/*" style="display: none;">
+
+                            <!-- Botão visível para acionar o upload -->
+                            <button id="change-pic-btn">
+                                <i class="fas fa-camera"></i> Alterar Foto
+                            </button>
                         </div>
-                      </div>
-                    <div class="paragraph">
-                        SEU NOME
+                    </div>
+                    <div class="editable-name-container">
+                        <h2 class="paragraph editable-name" contenteditable="false">SEU NOME</h2>
+                        <button class="edit-name-btn">
+                            <i class="fas fa-pencil-alt"></i>
+                        </button>
                     </div>
                 </div>
 
