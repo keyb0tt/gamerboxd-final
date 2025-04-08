@@ -3,10 +3,10 @@
 }
 
 body {
-    background-color: #000000;
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+    background-color: #121212;
+    /* Fundo escuro */
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
 }
 
 .app-container {
@@ -255,4 +255,182 @@ body {
 
 .edit-name-btn:hover {
     color: #ffffff !important;
+}
+
+.games-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 30px;
+    background: #1a1a1a;
+}
+
+.games-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.games-container::-webkit-scrollbar-track {
+    background: #333;
+    border-radius: 10px;
+}
+
+.games-container::-webkit-scrollbar-thumb {
+    background-color: #4CAF50;
+    border-radius: 10px;
+}
+
+.game-card {
+    width: 300px;
+    /* Largura reduzida para melhor visualização */
+    height: 300px;
+    /* Altura igual à largura */
+    background: #252525;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+    /* Centraliza os cards */
+}
+
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+
+.game-card:hover .game-image {
+    transform: scale(1.05);
+}
+
+.game-card:hover .change-game-image {
+    opacity: 1;
+}
+
+
+.game-image-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    padding-bottom: 100%;
+    /* Proporção 1:1 */
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.game-image-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.game-card:hover .game-image-container::after {
+    opacity: 1;
+}
+
+.game-info {
+    padding: 15px;
+    background: #1e1e1e;
+    flex-grow: 1;
+    /* Ocupa o espaço restante */
+}
+
+.game-info h3 {
+    color: white;
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+}
+
+.change-game-image {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.3s ease;
+    width: auto;
+    /* Remove largura fixa */
+    white-space: nowrap;
+}
+
+.change-game-image:hover {
+    background-color: #45a049;
+}
+
+.game-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+
+.game-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent 0%, rgba(76, 175, 80, 0.5) 50%, transparent 100%);
+    z-index: 2;
+}
+
+.game-info {
+    padding: 10px;
+    text-align: center;
+}
+
+.game-info h3 {
+    color: white;
+    margin: 0 0 8px 0;
+    font-size: 0.9rem;
+}
+
+.change-game-image {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .games-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+    .games-container {
+        grid-template-columns: 1fr;
+    }
 }
