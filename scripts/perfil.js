@@ -60,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function () {
     this.querySelector('#change-pic-btn').style.opacity = '0';
   });
 
-  // Name Editing
   const editableName = document.querySelector('.editable-name');
   const editNameBtn = document.querySelector('.edit-name-btn');
 
