@@ -29,7 +29,6 @@ function salvarDadosLogin() {
     const storage = remember ? localStorage : sessionStorage;
 
     let historicoLogins = JSON.parse(storage.getItem("historicoLogins") || "[]");
-    historicoLogins = JSON.parse(historicoLogins); // Converte a string para array
     historicoLogins.push(dadosLogin);
 
     storage.setItem("historicoLogins", JSON.stringify(historicoLogins));

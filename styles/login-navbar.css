@@ -38,18 +38,8 @@ header ul a {
 }
 
 header ul a:hover {
-    color: #ffffff;
-}
-
-header ul a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #4CAF50;
-    transition: width 0.3s ease;
+    color: rgb(20, 120, 0);
+    transition: 0.3s all;
 }
 
 header ul a:hover::after {
@@ -78,13 +68,13 @@ header ul a:hover::after {
         flex-direction: column;
         padding: 1rem;
     }
-    
+
     header ul {
         margin-top: 1rem;
         flex-wrap: wrap;
         justify-content: center;
     }
-    
+
     #inscreva-se-btn {
         margin-left: 0;
         margin-top: 0.5rem;
